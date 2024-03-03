@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup Banner</title>
+<style>
+    /* Popup styling */
+    .popup-container {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 2px solid #333;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+    .popup-content {
+        text-align: center;
+    }
+    /* Sample message styling */
+    #sampleMessage {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+
+<div class="popup-container" id="popupContainer">
+    <div class="popup-content">
+        <h2>Welcome to Sample Website!</h2>
+        <p>Thanks for visiting. Enjoy your stay!</p>
+        <button id="closeButton" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<div id="sampleMessage">
+    <p>This is a sample message displayed after the page has finished loading.</p>
+</div>
+
+<script>
+    // Function to display the popup
+    function showPopup() {
+        var popup = document.getElementById('popupContainer');
+        popup.style.display = 'block';
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        var popup = document.getElementById('popupContainer');
+        popup.style.display = 'none';
+        showSampleMessage();
+    }
+
+    // Function to display the sample message
+    function showSampleMessage() {
+        var sampleMessage = document.getElementById('sampleMessage');
+        sampleMessage.style.display = 'block';
+    }
+
+    // Event listener for page load to randomly display the popup
+    window.addEventListener('load', function() {
+        // Randomly decide whether to show the popup or not
+        var shouldDisplayPopup = Math.random() < 0.5;
+        if (shouldDisplayPopup) {
+            showPopup();
+        } else {
+            showSampleMessage();
+        }
+    });
+</script>
+
+</body>
+</html>
