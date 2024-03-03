@@ -2,6 +2,7 @@ name: test
 on:
   pull_request:
     branches: [ main, master ]
+  workflow_dispatch:
 jobs:
   playwright-test:
     timeout-minutes: 60
