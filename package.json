@@ -19,6 +19,6 @@
     "@playwright/test": "^1.45.1",
     "@types/node": "^20.14.10",
     "http-server": "^14.1.1",
-    "prettier": "^3.3.2"
+    "prettier": "^3.3.3"
   }
 }
