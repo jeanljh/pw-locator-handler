@@ -16,7 +16,7 @@
   "author": "jean",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.45.1",
+    "@playwright/test": "^1.47.2",
     "@types/node": "^22.7.4",
     "http-server": "^14.1.1",
     "prettier": "^3.3.2"
